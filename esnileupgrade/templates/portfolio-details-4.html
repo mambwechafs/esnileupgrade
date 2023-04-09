@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Esnile Innova Tech Ltd | Portfolio{% endblock %}
+
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/portfolio-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>Portfolio</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Portfolio</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="slides-1 portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/product-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/email-1.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/email-2.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/email-3.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Python </li>
+                <li><strong>Project date</strong>: 31st October, 2022</li>
+                <li><strong>Project URL</strong>: <a href="https://github.com/mambwechafs/emailsndr">https://github.com/mambwechafs/emailsndr</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Email Sender with Python</h2>
+              <p>
+                This program automates email sending, allowing users to customize email content and recipients. The program features a user-friendly interface and support attachment handling. This is a functional program that simplifies email communication and saves users time and effort.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

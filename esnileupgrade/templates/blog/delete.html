@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+ <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/blog-header.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center">
+      <h2>Blog</h2>
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li>Blog</li>
+      </ol>
+    </div>
+  </div><!-- End Breadcrumbs -->
+  {% if user.us_authenticated %}
+<div class="section-header">Delete Blog Post</h1>
+
+        </div>
+        <br>
+        <h3> Delete : {{ post.title }}</h3>
+
+     <div class="shadow p-3 mb-5 bg-body rounded">
+	<form method="POST">
+    {% csrf_token %}
+	<strong> Are you sure?</strong>
+   <button class="btn btn-primary"> Delete Post</button>
+	</form> 
+{% else %}
+
+You're not allowed here! GET OUT!!
+{% endif %}
+
+{% endblock %}

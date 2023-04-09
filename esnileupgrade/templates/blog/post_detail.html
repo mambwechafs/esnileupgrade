@@ -1,0 +1,83 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/blog-header.jpg');">
+  <div class="container position-relative d-flex flex-column align-items-center">
+    <h2>Blog</h2>
+    <ol>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li>Blog</li>
+    </ol>
+  </div>
+</div>
+<section id="blog" class="blog">
+  <div class="container" data-aos="fade-up">
+    <div class="row g-5">
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <article class="blog-details">
+          {% if post.image %}
+          <div class="post-img"><img src="{{post.image.url}}"  class="img-fluid" alt=""></div>
+          {% endif %}
+          <h2 class="title">{{ post.title }}</h2>
+          <div class="meta-top">
+            <ul>
+              <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'post_detail' post.slug %}">{{ post.author.first_name }} {{ post.author.last_name }}</a></li>
+              <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'post_detail' post.slug %}"><time datetime="{{ post.date_added }}">{{ post.date_added }}</time></a></li>
+            </ul>
+          </div><!-- End meta top -->
+          <div class="content">
+            <p>{{ post.body | safe }}</p>
+          </div>
+         
+          
+          <div class="comments">
+            <h4 class="comments-count">{{ post.comments.count }} Comments</h4>
+            {% for comment in post.comments.all %}
+              <div id="comment-{{ comment.id }}" class="comment">
+                <div>
+                  <h5><a href="">{{ comment.name }}</a></h5>
+                  <time datetime="{{ comment.date_added }}">{{ comment.date_added }}</time>
+                  <p>{{ comment.body }}</p>
+                </div>
+              </div>
+            {% empty %}
+              <div class="notification">
+                <p>No comments yet!</p>
+              </div>
+            {% endfor %}
+          </div><!-- End comments -->
+          <div class="reply-form">
+            <h4>Leave a Comment</h4>
+            
+            <form method="post" action="{% url 'post_detail' slug=object.slug %}">
+               {% csrf_token %}
+                {{ comment_form.as_p }}
+              <div class="field">
+                <div class="control">
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+                </div>
+              </div>
+            </form>
+          </div><!-- End reply-form -->
+        </article><!-- End blog-details -->
+      </div><!-- End col-lg-8 -->
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="sidebar">
+  
+          <h3 class="sidebar-title">Categories</h3>
+          <div class="sidebar-item categories">
+            <ul>
+              <br>
+             {% for category in categories %}
+                <li><a href="{% url 'category' category.name %}">{{ category.name }} ({{ category.post_count }})</a></li>
+                {% empty %}
+                <li>No categories yet.</li>
+                {% endfor %}
+            </ul>
+          </div><!-- End sidebar-item -->
+        </div><!-- End sidebar -->
+      </div><!-- End col-lg-4 -->
+    </div><!-- End row -->
+  </div><!-- End container -->
+</section><!-- End blog -->
+{% endblock %}

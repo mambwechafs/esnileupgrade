@@ -1,0 +1,105 @@
+
+
+{% extends 'blog/base.html'%}
+{% load static %}
+{% block content %}
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/blog-header.jpg');">
+  <div class="container position-relative d-flex flex-column align-items-center">
+    <h2>Blog</h2>
+    <ol>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li>Blog</li>
+    </ol>
+  </div>
+</div>
+
+  <section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5 posts-list">
+            {% for post in object_list %}
+            <div class="col-lg-6">
+              <article class="d-flex flex-column">
+                {% if post.image %}
+                <div class="post-img"><img src="{{post.image.url}}"  class="img-fluid" alt=""></div>
+                {% endif %}
+                <h2 class="title">
+                  <a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
+                </h2>
+                <div class="meta-top">
+                  <ul>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'post_detail' post.slug %}">{{post.author.first_name}} </a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'post_detail' post.slug %}"><time datetime=" {{ post.date_added }}"> {{ post.date_added }}</time></a></li>
+                  </ul>
+                </div>
+                <div class="content">
+                  <p>
+                    {{ post.body|slice:":200" | safe}}
+                  </p>
+                </div>
+                <div class="read-more mt-auto align-self-end">
+                  <a href="{% url 'post_detail' post.slug %}">Read More <i class="bi bi-arrow-right"></i></a>
+                  {% if user.us_authenticated %}
+                  <a href="{% url 'update' post.slug %}"><button class="btn btn-primary"> Edit Post</button></a>
+                  <a href="{% url 'delete' post.slug %}"><button class="btn btn-primary"> Delete Post</button></a>
+                  {% endif %}
+                </div>
+              </article>
+            </div><!-- End post list item -->
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="sidebar">
+            <h3 class="sidebar-title">Categories</h3>
+            <div class="sidebar-item categories">
+              <ul>
+               {% for category in categories %}
+               <br>
+                <li><a href="{% url 'category' category.name %}">{{ category.name }} ({{ category.post_count }})</a></li>
+                {% empty %}
+                <li>No categories yet.</li>
+                {% endfor %}
+
+              </ul>
+            </div><!-- End sidebar-item -->
+          </div><!-- End sidebar -->
+        </div><!-- End col-lg-4 -->
+      </div><!-- End row -->    
+{% if is_paginated %}
+<div class="blog-pagination">
+  <ul class="justify-content-center">
+    {% if page_obj.has_previous %}
+      <li><a href="?page=1"><i class="bi bi-chevron-double-left"></i></a></li>
+      <li><a href="?page={{ page_obj.previous_page_number }}"><i class="bi bi-chevron-left"></i></a></li>
+    {% else %}
+      <li class="disabled"><a href="#"><i class="bi bi-chevron-double-left"></i></a></li>
+      <li class="disabled"><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+      {% if page_obj.number == num %}
+        <li class="active"><a href="#">{{ num }}</a></li>
+      {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+        <li><a href="?page={{ num }}">{{ num }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+      <li><a href="?page={{ page_obj.next_page_number }}"><i class="bi bi-chevron-right"></i></a></li>
+      <li><a href="?page={{ page_obj.paginator.num_pages }}"><i class="bi bi-chevron-double-right"></i></a></li>
+    {% else %}
+      <li class="disabled"><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+      <li class="disabled"><a href="#"><i class="bi bi-chevron-double-right"></i></a></li>
+    {% endif %}
+  </ul>
+</div><!-- End blog pagination -->
+{% endif %}
+
+      </div>
+    </div>
+  </section>
+{% endblock %}
+ 
+              

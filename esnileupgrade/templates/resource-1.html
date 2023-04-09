@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Esnile Innova Tech Ltd | Resources{% endblock %}
+
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/blog-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>Resources </h2>
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a>Resources</a></li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <article class="blog-details">
+
+              <div class="post-img">
+                <img src="../static/img/5image.png" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">5 Essential Elements of a Successful Website</h2>
+
+              <div class="meta-top">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'essential_elements' %}">Mambwe Chafungwa</a></li>
+
+                </ul>
+              </div><!-- End meta top -->
+
+              <div class="content">
+                <p>
+                  Your website is the cornerstone of your online presence. It's where potential customers go to learn more about your business, make purchases, and connect with your brand. But creating a website that delivers results can be a challenge. That's why we're offering a free guide, "5 Essential Elements of a Successful Website," to help you get started.
+                </p>
+                <p>
+                  This guide will help you identify the key components your website needs to succeed, including:
+                  <li>Responsive design</li>
+                  <li>Call to Actions that Drive Conversion</li>
+                  <li>Search engine optimization</li>
+                  <li>And More!</li>
+                </p>
+                <p>
+                 Download our guide and start creating a website that truly works for you!
+                </p>
+
+              </div><!-- End post content -->
+
+             
+
+                  <a href="../static/resources/5-Essential-Elements-of-a-Successful-Website.pdf" download><button class="btn btn-primary">Click Here to Download</button></a>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+          
+              
+                
+
+                </div>
+
+              
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Blog Details Section -->
+
+  </main>
+{% endblock %}

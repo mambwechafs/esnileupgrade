@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Esnile Innova Tech Ltd | Services{% endblock %}
+
+
+{% block content %}
+  <style>
+.testimonial-item {
+  box-sizing: content-box;
+  padding: 30px;
+  margin: 40px 30px;
+  box-shadow: 0px 0 20px rgba(27, 47, 69, 0.1);
+  background: #fff;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.testimonial-item .stars {
+  margin-bottom: 15px;
+}
+
+.testimonial-item .stars i {
+  color: #ffc107;
+  margin: 0 1px;
+}
+
+.testimonial-item .testimonial-img {
+  width: 90px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin: 0 auto;
+}
+
+.testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #111;
+}
+
+.testimonial-item h4 {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.testimonial-item p {
+  font-style: italic;
+  margin: 0 auto 15px auto;
+}
+
+.swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #e8eff6;
+  opacity: 1;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+}
+
+.swiper-slide {
+  opacity: 0.3;
+}
+
+@media (max-width: 1199px) {
+  .swiper-slide-active {
+    opacity: 1;
+  }
+
+  .swiper-pagination {
+    margin-top: 0;
+  }
+
+  .testimonial-item {
+    margin: 40px 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper-slide-next {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+</style>
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/services-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>Services</h2>
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li>Services</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+<!-- ======= Our Services Section ======= -->
+    <section id="services-list" class="services-list">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Services</h2>
+
+        </div>
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-laptop" style="color: #2213f5;"></i></div>
+            <div>
+              <h4 class="title"><a href="#" class="stretched-link">Website Development</a></h4>
+              <p class="description">We offer professional website design and development services that are tailored to the unique needs of each of our clients. From simple static websites to complex content management systems, we have the expertise to deliver the results you need to make a strong online presence.</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-code-square" style="color: #2213f5;"></i></div>
+            <div>
+              <h4 class="title"><a href="#" class="stretched-link">Software Design</a></h4>
+              <p class="description">Our team of experts specializes in designing software solutions that are efficient, reliable, and easy to use. We use the latest technologies and best practices to ensure that our solutions are scalable and can grow with your business.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="bi bi-ui-checks-grid" style="color: #1807d9;"></i></div>
+            <div>
+              <h4 class="title"><a href="#" class="stretched-link">UX/UI Design</a></h4>
+              <p class="description">We offer UX/UI design services that ensure your product is visually appealing and user-friendly. Our team of experts will work with you to design a user interface that is intuitive and easy to navigate, ensuring your customers have a positive experience with your product.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          
+        </div>
+
+      </div>
+    </section><!-- End Our Services Section -->
+
+    <!-- ======= Services Cards Section ======= -->
+    <section id="services-cards" class="services-cards">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(../static/img/cards-1.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Machine Learning</h4>
+                    <p>We offer machine learning services that enable businesses to analyze large data sets and extract insights that can help inform business decisions. Our team of experts can help you design and develop custom machine learning algorithms that are tailored to your specific needs, whether it's for predictive analytics or natural language processing.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(../static/img/cards-2.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Custom Application Development</h4>
+                    <p>We offer custom application development services that are tailored to the specific needs of your business. Our team of experts will work with you to understand your needs and develop a solution that meets those needs, whether it's a mobile application or a desktop application.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(../static/img/cards-3.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">E-Commerce Solutions</h4>
+                    <p>We offer e-commerce solutions that enable businesses to sell their products and services online. Our team of experts can help you design and develop a custom e-commerce platform that is tailored to your specific needs, including shopping cart integration, payment gateway integration, and more.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(../static/img/cards-4.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Hosting</h4>
+                    <p>We offer reliable hosting services that ensure your website and applications are always available to your customers. We provide a variety of hosting options, including shared hosting, virtual private servers, and dedicated servers, to meet the specific needs of your business.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Services Cards Section -->
+
+ <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Testimonials</h2>
+
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  I just wanted to express my sincere gratitude to Esnile Innova Tech Ltd. Their exceptional service has truly exceeded my expectations, and I am so grateful for their help. Not only did they provide me with the support I needed, but they also went above and beyond to ensure that I was completely satisfied. I am so impressed with their professionalism, expertise, and overall commitment to excellence. I would highly recommend Esnile Innova Tech Ltd to anyone who is looking for top-notch service. Thank you again - we shall definitely recommend others to you!
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'img/testimonials/testimonials-3.png' %}" class="testimonial-img" alt="">
+                  <h3>Fred Kabaso</h3>
+                  <h4>Environmental Engineer (BEng,Msc)</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                   I was impressed by the quality of work that was delivered by Esnile Innova Tech Ltd. They were professional, efficient, and provided excellent results. I would highly recommend them to anyone looking for top-notch service!
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Jonathan Mwendabia</h3>
+                  <h4>Civil High Way Engineer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  </main>
+{% endblock %}

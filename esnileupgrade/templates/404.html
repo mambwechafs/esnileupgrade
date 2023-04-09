@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+ <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'img/blog-header.jpg' %}');">
+
+  <div class="container position-relative d-flex flex-column align-items-center">
+    <h2>Blog</h2>
+    <ol>
+      <li><a href="{% url 'blog_home' %}">Home</a></li>
+      <li>Blog</li>
+    </ol>
+  </div>
+</div><!-- End Breadcrumbs -->
+<br>
+<center>
+	<h1>404 Error</h1>
+	<p>Page Not Found  - Try Again......</p>
+</center>
+
+{% endblock %}
+
+
+

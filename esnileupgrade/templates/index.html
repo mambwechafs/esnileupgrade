@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Esnile Innova Tech Ltd | Home{% endblock %}
+{% block content %}
+<section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4">
+          <h2 data-aos="fade-up">Innovating the Future</h2>
+          <blockquote data-aos="fade-up" data-aos-delay="100">
+            <p>We believe in harnessing the power of technology to create innovative solutions that help businesses and organizations thrive in the digital age. At Esnile Innova Tech Ltd, we believe that our success is tied to the success of our clients, and we are dedicated to building long-term relationships based on trust, transparency, and mutual respect. We strive to deliver excellence in everything we do, and we are committed to providing exceptional customer service at every step of the way. </p>
+          </blockquote>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+            <a href="../static/img/welcome-video.mp4" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Why Choose Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Why Choose Us</h2>
+
+        </div>
+
+        <div class="row g-0" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-xl-5 img-bg" style="background-image: url('../static/img/why-us-bg.jpg')"></div>
+          <div class="col-xl-7 slides  position-relative">
+
+            <div class="slides-1 swiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="item">
+                    <h3 class="mb-3">Quality</h3>
+                    <h4 class="mb-3">We take pride in delivering high-quality work that meets the unique needs of our clients.</h4>
+                    <p>We believe in attention to detail and working closely with our clients to ensure that their projects are completed to their satisfaction.</p>
+                  </div>
+                </div><!-- End slide item -->
+
+                <div class="swiper-slide">
+                  <div class="item">
+                    <h3 class="mb-3">Innovation</h3>
+                    <h4 class="mb-3">We are passionate about innovation and harnessing the power of technology to create solutions that help our clients succeed.</h4>
+                    <p>We believe in constantly pushing the boundaries and exploring new possibilities to stay ahead of the curve.</p>
+                  </div>
+                </div><!-- End slide item -->
+
+                <div class="swiper-slide">
+                  <div class="item">
+                    <h3 class="mb-3">Customer Service</h3>
+                    <h4 class="mb-3">We believe that exceptional customer service is the key to building strong, long-term relationships with our clients.</h4>
+                    <p>We work closely with our clients to understand their needs and challenges, and we are committed to providing prompt, professional, and friendly service at every step of the way.</p>
+                  </div>
+                </div><!-- End slide item -->
+
+                <div class="swiper-slide">
+                  <div class="item">
+                    <h3 class="mb-3">Expertise</h3>
+                    <h4 class="mb-3"> Our team brings a wealth of knowledge and experience to every project we undertake.</h4>
+                    <p>We specialize in website development, Python programming, and machine learning, and we are committed to staying up-to-date with the latest industry trends and technologies.</p>
+                  </div>
+                </div><!-- End slide item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Choose Us Section -->
+
+<!-- ======= Our Services Section ======= -->
+    <section id="services-list" class="services-list">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Services</h2>
+
+        </div>
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-laptop" style="color: #2213f5;"></i></div>
+            <div>
+              <h4 class="title"><a href="#" class="stretched-link">Website Development</a></h4>
+              <p class="description">We offer professional website design and development services that are tailored to the unique needs of each of our clients. From simple static websites to complex content management systems, we have the expertise to deliver the results you need to make a strong online presence.</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-code-square" style="color: #2213f5;"></i></div>
+            <div>
+              <h4 class="title"><a href="#" class="stretched-link">Software Design</a></h4>
+              <p class="description">Our team of experts specializes in designing software solutions that are efficient, reliable, and easy to use. We use the latest technologies and best practices to ensure that our solutions are scalable and can grow with your business.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="bi bi-ui-checks-grid" style="color: #1807d9;"></i></div>
+            <div>
+              <h4 class="title"><a href="#" class="stretched-link">UX/UI Design</a></h4>
+              <p class="description">We offer UX/UI design services that ensure your product is visually appealing and user-friendly. Our team of experts will work with you to design a user interface that is intuitive and easy to navigate, ensuring your customers have a positive experience with your product.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          
+        </div>
+
+      </div>
+    </section><!-- End Our Services Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h3>Ready to take your online presence to the next level?</h3>
+            <p>Contact us today and let us create a custom solution that perfectly reflects your brand and helps you succeed in the digital world. Your online success is our top priority - let's make it happen!</p>
+            <a class="cta-btn" href="{% url 'contact' %}">Contact Us!</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <h3>Unleashing the Power of Your Online Presence<br>Our Game-Changing Features</h3>
+
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <div class="icon-list d-flex">
+                  <i class="ri-paint-brush-line" style="color: #5578ff;"></i>
+                  <span>Customized Solutions</span>
+                </div>
+              </div><!-- End Icon List Item-->
+
+              <div class="col-md-6">
+                <div class="icon-list d-flex">
+                  <i class="bi bi-ui-checks-grid" style="color: #5578ff;"></i>
+                  <span>User Experience Design</span>
+                </div>
+              </div><!-- End Icon List Item-->
+
+              <div class="col-md-6">
+                <div class="icon-list d-flex">
+                  <i class="ri-database-2-line" style="color: #5578ff;"></i>
+                  <span>Scalability</span>
+                </div>
+              </div><!-- End Icon List Item-->
+
+              <div class="col-md-6">
+                <div class="icon-list d-flex">
+                  <i class="bi bi-file-lock" style="color: #5578ff;"></i>
+                  <span>Security</span>
+                </div>
+              </div><!-- End Icon List Item-->
+
+              <div class="col-md-6">
+                <div class="icon-list d-flex">
+                  <i class="bi bi-graph-down" style="color: #5578ff;"></i>
+                  <span>Analytics and Reporting</span>
+                </div>
+              </div><!-- End Icon List Item-->
+
+              <div class="col-md-6">
+                <div class="icon-list d-flex">
+                  <i class="bi bi-laptop" style="color: #5578ff;"></i>
+                  <span>Expert Website Development</span>
+                </div>
+              </div><!-- End Icon List Item-->
+
+            </div>
+          </div>
+          <div class="col-lg-5 position-relative" data-aos="fade-up" data-aos-delay="200">
+            <div class="phone-wrap">
+              <img src="../static/img/iphone.png" alt="Image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="details">
+        <div class="container" data-aos="fade-up" data-aos-delay="300">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Our mission is to help you unleash<br>the full potential of your online presence.</h4>
+              <p>Whether you're a small business owner just starting out or a seasoned entrepreneur looking to take your online strategy to the next level, our game-changing features are designed to help you succeed. Contact us today to learn more and take the first step towards online success!</p>
+              <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End Features Section -->
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-posts" class="recent-posts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Recent Blog Posts</h2>
+
+        </div>
+
+       <div class="row gy-5">
+  {% for post in recent_posts %}
+  <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="">
+    <div class="post-box">
+      {% if post.image %}
+      <div class="post-img"><img src="{{post.image.url}}"  class="img-fluid" alt=""></div>
+      {% endif %}
+      <div class="meta">
+        <span class="post-date">{{ post.date_added|date:"D, M d, Y" }}</span>
+        <span class="post-author"> / {{post.author.first_name}}</span>
+      </div>
+      <h3 class="post-title">{{ post.title }}</h3>
+      <p>{{ post.intro }}</p>
+      <a href="{% url 'post_detail' post.slug %}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+        </div>
+
+      </div>
+    </section><!-- End Recent Blog Posts Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

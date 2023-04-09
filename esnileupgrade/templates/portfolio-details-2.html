@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Esnile Innova Tech Ltd | Portfolio{% endblock %}
+
+{% block content %}
+ <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/portfolio-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>Portfolio</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Portfolio</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="slides-1 portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/product-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/pass-checker-1.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/pass-checker-2.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/pass-checker-3.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Python </li>
+                <li><strong>Project date</strong>: 31st October, 2022</li>
+                <li><strong>Project URL</strong>: <a href="https://github.com/mambwechafs/passwrd-strngth-chck">https://github.com/mambwechafs/passwrd-strngth-chck</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Password Checker - Python</h2>
+              <p>
+                The Password Checker is a Python program that analyzes the strength of passwords and provides users with feedback on their security level. The program will prompt users to enter a password and analyze it for length, complexity, and common patterns, offering suggestions for improvement. The project aims to reduce the likelihood of security breaches by helping users create stronger passwords.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

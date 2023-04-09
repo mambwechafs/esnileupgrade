@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+  <title>{% block title %}Esnile Innova Tech Ltd{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="shortcut icon" type="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+  <link rel="shortcut icon" type="apple-touch-icon" href="{% static 'img/android-chrome-192x192' %}">
+ 
+
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block head %}{% endblock %}
+</head>
+
+<body class="page-index">
+    
+    <div class="container-1">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+  <!-- ======= Header ======= -->
+  {% block header %}
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="{% static 'img/logo.png' %}" alt="">
+        <h1 class="d-flex align-items-center">Esnile Innova Tech Ltd</h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'home' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'projects' %}">Portfolio</a></li>
+          <li><a href="{% url 'blog_home' %}">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="{% url 'essential_elements' %}">5 Essential Elements of a Successful Website</a></li>
+              <li><a href="{% static 'resources/Esnile-Innova-Tech-Limited-Company-Profile.pdf' %}" download>Company Profile</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  {% endblock %}
+
+{% block footer %}
+<footer id="footer" class="footer">
+
+    <div class="footer-content">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+              <span>Esnile Innova Tech Ltd</span>
+            </a>
+            <p>Esnile Innova Tech Ltd is a technology company that specializes in website development, Python programming, and machine learning. We pride ourselves on delivering top-quality solutions to businesses and individuals looking to establish a strong online presence. With a team of experienced professionals, we're committed to providing our clients with personalized services and tailored solutions to meet their unique needs. Contact us today to learn more about how we can help you achieve your online goals.</p>
+            <div class="social-links d-flex  mt-3">
+              <a href="https://www.facebook.com/esnileinnova/" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/esnileinnovatech/" class="instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-dash"></i> <a href="{% url 'home' %}">Home</a></li>
+              <li><i class="bi bi-dash"></i> <a href="../templates/about.html">About us</a></li>
+              <li><i class="bi bi-dash"></i> <a href="../templates/services.html">Services</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-dash"></i> <a href="../templates/services.html">Website Development</a></li>
+              <li><i class="bi bi-dash"></i> <a href="../templates/services.html">Software Design</a></li>
+              <li><i class="bi bi-dash"></i> <a href="../templates/services.html">Machine Learning</a></li>
+              <li><i class="bi bi-dash"></i> <a href="../templates/services.html">Hosting</a></li>
+              <li><i class="bi bi-dash"></i> <a href="../templates/services.html">UX/UI Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+             
+              Kitwe, Copperbelt<br>
+              Zambia. <br><br>
+              <strong>Phone:</strong> +260963777748<br>
+              <strong>Email:</strong> info@esnileinnova.tech<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Esnile Innova Tech Limited</span></strong>. All Rights Reserved <span id="current-year"></span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://www.esnileinnova.tech">Esnile Innova Tech Limited</a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+  {% endblock %}
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <script>
+		document.getElementById("current-year").innerHTML = new Date().getFullYear();
+	</script>
+</body>

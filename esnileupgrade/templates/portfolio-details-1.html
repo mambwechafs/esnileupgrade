@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Esnile Innova Tech Ltd | Portfolio{% endblock %}
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/portfolio-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>Portfolio</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Portfolio</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="slides-1 portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/app-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/mambwe-1.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/mambwe-2.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/mambwe-3.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Project date</strong>: 23rd September, 2022</li>
+                <li><strong>Project URL</strong>: <a href="https://www.mambwechafsdev.com/">https://www.mambwechafsdev.com/</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Personal Portfolio Website</h2>
+              <p>
+                Mambwe Chafungwa designed and developed his portfolio website to showcase past projects. The website will display work accomplished in a visually appealing manner and be optimized for user experience and search engines.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

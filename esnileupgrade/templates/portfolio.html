@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block title %}Esnile Innova Tech Ltd | Portfolio{% endblock %}
+
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/portfolio-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>Portfolio</h2>
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li>Portfolio</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+
+          <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Website</li>
+            <li data-filter=".filter-product">Python</li>
+            <!-- <li data-filter=".filter-branding">Branding</li> -->
+            <!-- <li data-filter=".filter-books">Books</li> -->
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <img src="../static/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Image Civil Engineering Ltd Website</h4>
+                <p>Esnile Innova Tech Ltd redesigned Image Civil Engineering Ltd's website. </p>
+                <a href="../static/img/portfolio/app-1.jpg" title="Image Civil Engineering Ltd Website" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'image_civil_engineering' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-product">
+              <img src="../static/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Password Checker</h4>
+                <p>A functional Python program that analyzes password strength, provides immediate feedback to users, and suggests improvements.</p>
+                <a href="../static/img/portfolio/product-1.jpg" title="Password Checker" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'python_password_checker' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <img src="../static/img/portfolio/app-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Mambwe Chafungwa Portfolio Website</h4>
+                <p>Mambwe Chafungwa designed his portfolio website</p>
+                <a href="../static/img/portfolio/app-2.jpg" title="Mambwe Chafungwa Portfolio Website" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'mambwe_chafs_portfolio' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-product">
+              <img src="../static/img/portfolio/product-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Email Sender with Python</h4>
+                <p> A Python program that automates email sending, allowing users to customize email content and recipients.</p>
+                <a href="../static/img/portfolio/product-2.jpg" title="Email Sender with Python" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'python_email_sender' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-product">
+              <img src="../static/img/portfolio/product-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web Scraper</h4>
+                <p>A functional Python program that extracts news articles with more than 100 votes from Hacker News website, using web scraping techniques and filtering options</p>
+                <a href="../static/img/portfolio/product-3.jpg" title="Web Scraper" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'python_web_scraper' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <img src="../static/img/portfolio/cover-eco.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Eco-First Innovations Environmental Consultancy Firm</h4>
+                <p>Esnile Innova Tech Ltd designed Eco-First Innovations Environmental Consultancy Firm. </p>
+                <a href="../static/img/portfolio/cover-eco.png" title="Eco-First Innovations Environmental Consultancy Firm Website" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{% url 'eco_first_innovations' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+           
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}Esnile Innova Tech Ltd | Portfolio{% endblock %}
+
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../static/img/portfolio-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>Portfolio</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Portfolio</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="slides-1 portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/app-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/image-before.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/image-after.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../static/img/portfolio/image-services.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>:  Image Civil & Electrical Engineering Limited</li>
+                <li><strong>Project date</strong>: 20th February, 2023</li>
+                <li><strong>Project URL</strong>: <a href="https://www.imagecivilengineering.com/">https://www.imagecivilengineering.com/</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Website Redesign for Image Civil & Electrical Engineering Ltd</h2>
+              <p>
+                We redesigned the website for Image Civil & Electrical Engineering Ltd, a construction company based in Ndola. Our goal was to create a modern, user-friendly website that effectively showcases the company's high-quality and efficient construction services, as well as their professional team of experts. The scope of the project included a comprehensive review of the current website, a new website design, improved layout and navigation, new content highlighting services and expertise and responsive design for mobile-friendliness. The result is a new website that will increase client satisfaction and lead generation, completed on time and within budget.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

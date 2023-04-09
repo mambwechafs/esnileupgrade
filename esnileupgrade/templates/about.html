@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Esnile Innova Tech Ltd | About Us{% endblock %}
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'img/blog-header.jpg' %}');">
+  <div class="container position-relative d-flex flex-column align-items-center">
+    <h2>About</h2>
+    <ol>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li>About</li>
+    </ol>
+  </div>
+</div>
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4" data-aos="fade-up">
+          <div class="col-lg-4">
+            <img src="{% static 'img/about.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8">
+            <div class="content ps-lg-5">
+              <h3>Welcome to Esnile Innova Tech Ltd</h3>
+              <p>
+                Founded by Mambwe Chafungwa, a talented freelancer who saw the need for high-quality website and software development services in Zambia, we are passionate about creating innovative solutions that help businesses and organizations thrive.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> Our commitment to excellence and customer satisfaction has earned us a reputation for delivering top-quality services that are tailored to our clients' specific needs.</li>
+                <li><i class="bi bi-check-circle-fill"></i> At Esnile Innova Tech Ltd, we specialize in developing and designing websites and software that are tailored to the unique needs of our clients. Whether you're a small startup or a large corporation, we have the expertise to deliver the results you need.</li>
+                <li><i class="bi bi-check-circle-fill"></i> We believe that technology is a powerful tool for solving problems and improving lives. That's why we use the latest technologies and best practices to ensure that our solutions are efficient, reliable, and scalable.</li>
+              </ul>
+              <p>
+                At Esnile Innova Tech Ltd, we understand that technology can be complex and overwhelming, which is why we strive to make the process as simple and stress-free as possible for our clients. We believe that communication and collaboration are key to a successful project, which is why we work closely with our clients every step of the way.
+              </p>
+              <p>
+                We are committed to delivering high-quality solutions that meet and exceed our clients' expectations. We take pride in our work and invite you to take a look at our portfolio to see some of the projects we've worked on.
+              </p>
+              <p>
+                Thank you for considering Esnile Innova Tech Ltd for your website and software development needs. We look forward to the opportunity to work with you and help your business thrive.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+       <!-- ======= Why Choose Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Why Choose Us</h2>
+
+        </div>
+
+        <div class="row g-0" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-xl-5 img-bg" style="background-image: url('../static/img/why-us-bg.jpg')"></div>
+          <div class="col-xl-7 slides  position-relative">
+
+            <div class="slides-1 swiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="item">
+                    <h3 class="mb-3">Quality</h3>
+                    <h4 class="mb-3">We take pride in delivering high-quality work that meets the unique needs of our clients.</h4>
+                    <p>We believe in attention to detail and working closely with our clients to ensure that their projects are completed to their satisfaction.</p>
+                  </div>
+                </div><!-- End slide item -->
+
+                <div class="swiper-slide">
+                  <div class="item">
+                    <h3 class="mb-3">Innovation</h3>
+                    <h4 class="mb-3">We are passionate about innovation and harnessing the power of technology to create solutions that help our clients succeed.</h4>
+                    <p>We believe in constantly pushing the boundaries and exploring new possibilities to stay ahead of the curve.</p>
+                  </div>
+                </div><!-- End slide item -->
+
+                <div class="swiper-slide">
+                  <div class="item">
+                    <h3 class="mb-3">Customer Service</h3>
+                    <h4 class="mb-3">We believe that exceptional customer service is the key to building strong, long-term relationships with our clients.</h4>
+                    <p>We work closely with our clients to understand their needs and challenges, and we are committed to providing prompt, professional, and friendly service at every step of the way.</p>
+                  </div>
+                </div><!-- End slide item -->
+
+                <div class="swiper-slide">
+                  <div class="item">
+                    <h3 class="mb-3">Expertise</h3>
+                    <h4 class="mb-3"> Our team brings a wealth of knowledge and experience to every project we undertake.</h4>
+                    <p>We specialize in website development, Python programming, and machine learning, and we are committed to staying up-to-date with the latest industry trends and technologies.</p>
+                  </div>
+                </div><!-- End slide item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Choose Us Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Team</h2>
+
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'img/team/team-1.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/ChafungwaMambwe"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100087239601239"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/mambwechafs/?fbclid=IwAR1XhUk7mLWw_lew1lAxZtbevgGZynpEwR2icr4cprbVzfNhfMBpWh_voqw"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/mambwe-chafungwa/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Mambwe Chafungwa</h4>
+                <span>Full Stack Python Developer</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'img/team/team-2.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Ng'andwe Chishimba</h4>
+                <span>Software Engineer</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Bertha C Chafungwa</h4>
+                <span>Chief Operating Officer</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}
